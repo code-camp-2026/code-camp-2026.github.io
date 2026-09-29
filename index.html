@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Code Camp — Executive Infographic 2025 → 2026</title>
+<style>
+  :root{
+    --navy:#1C0C6E; --indigo2:#291A76; --violet:#7858FF; --muted-violet:#4E428E;
+    --lav:#E2DBFF; --lav-soft:#EFEBFF; --sap:#0070F2; --sky:#89D1FF; --magenta:#F31DED; --pink:#FFDCF3;
+    --ink:#1a1533; --muted:#5b5470; --white:#fff; --line:#e4e0f2;
+    --up:#0070F2; --upbg:#e3efff; --strongup:#0a8f5b; --strongupbg:#e2f6ec;
+    --down:#C1119A; --downbg:#fce4f7; --flat:#6a6285; --flatbg:#eeebf6;
+    --shadow:0 6px 28px rgba(28,12,110,.12);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  /* Preserve brand gradients/colors when printed or exported to PDF */
+  *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;color-adjust:exact !important}
+  html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#efecfa,#e7e3f6);color:var(--ink);line-height:1.5;padding:30px 16px}
+  .page{max-width:1020px;margin:0 auto}
+
+  .banner{background:linear-gradient(120deg,var(--navy) 0%,var(--indigo2) 60%,var(--muted-violet) 100%);color:#fff;border-radius:20px;padding:32px 38px;margin-bottom:20px;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+  .banner::after{content:"";position:absolute;right:-50px;top:-50px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(120,88,255,.45),transparent 70%)}
+  .banner .eyebrow{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--sky);font-weight:800}
+  .banner .wm{font-size:38px;font-weight:900;letter-spacing:-.5px;margin:5px 0 1px}
+  .banner .rt{font-size:18px;font-weight:700;color:var(--lav)}
+  .banner .period{font-size:13px;color:#cfc9f2;margin-top:8px;font-weight:600}
+  .banner .headline{position:relative;margin-top:14px;background:rgba(255,255,255,.12);border:1px solid rgba(226,219,255,.35);border-radius:12px;padding:11px 15px;font-size:14.5px;font-weight:600;max-width:820px}
+
+  .section-title{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted-violet);font-weight:800;margin:26px 6px 12px}
+  .grid{display:grid;gap:16px}
+  .g4{grid-template-columns:repeat(4,1fr)}.g3{grid-template-columns:repeat(3,1fr)}
+  .card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 4px 16px rgba(28,12,110,.07)}
+
+  .kpi .num{font-size:46px;font-weight:900;line-height:1;letter-spacing:-1px;color:var(--navy)}
+  .kpi .label{font-size:12px;color:var(--muted);margin-top:8px;font-weight:700;text-transform:uppercase;letter-spacing:.4px}
+  .mv-pill{display:inline-flex;align-items:center;gap:6px;font-weight:800;border-radius:20px;padding:5px 12px;font-size:12.5px;border:2px solid transparent;margin-top:10px}
+  .mv-pill .sym{font-size:15px;font-weight:900;line-height:1}
+  .m-su{background:var(--strongupbg);color:var(--strongup);border-color:#9fdcbe}
+  .m-up{background:var(--upbg);color:var(--up);border-color:#a9cdf7}
+  .m-flat{background:var(--flatbg);color:var(--flat);border-color:#d3cde6}
+  .m-down{background:var(--downbg);color:var(--down);border-color:#f3b6e3}
+
+  .sec-card{border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 4px 16px rgba(28,12,110,.07)}
+  .sec-hd{padding:14px 22px;color:#fff}
+  .sec-hd .kick{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;opacity:.85;display:block}
+  .sec-hd h2{font-size:21px;font-weight:800;margin-top:1px}
+  .sec-bd{padding:20px 22px;background:var(--white)}
+  .hd-sap{background:linear-gradient(100deg,#0a4fb0,var(--sap))}
+  .hd-violet{background:linear-gradient(100deg,var(--muted-violet),var(--violet))}
+  .hd-risk{background:linear-gradient(100deg,#7a0f8f,var(--magenta))}
+  .hd-navy{background:linear-gradient(100deg,var(--navy),var(--muted-violet))}
+
+  .ret strong{font-size:15px}
+  .quote{font-style:italic;color:#3a3358;background:var(--lav-soft);border-left:4px solid var(--sky);padding:8px 12px;margin-top:10px;border-radius:8px;font-size:13px}
+
+  /* Large YoY movement rows */
+  .mv-row{display:grid;grid-template-columns:190px 60px 60px 1fr;gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+  .mv-row:last-child{border-bottom:none}
+  .mv-row .nm{font-weight:700;font-size:14.5px;color:var(--navy)}
+  .mv-row .y{font-weight:800;font-size:18px;text-align:center;color:var(--muted)}
+  .mv-row .y.now{color:var(--navy);font-size:22px}
+
+  .scorecard table{width:100%;border-collapse:separate;border-spacing:0}
+  .scorecard th{background:var(--navy);color:#fff;text-align:left;padding:10px 13px;font-size:12px;letter-spacing:.3px}
+  .scorecard th:first-child{border-top-left-radius:10px}.scorecard th:last-child{border-top-right-radius:10px}
+  .scorecard td{padding:10px 13px;border-bottom:1px solid var(--line);font-size:14px}
+  .scorecard tr:nth-child(even) td{background:#faf9fe}
+  .yr{font-weight:800;color:var(--navy)}
+
+  .closeout{margin-top:18px;background:linear-gradient(120deg,var(--navy),var(--muted-violet));color:#fff;border-radius:16px;padding:24px 28px}
+  .closeout .kick{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--sky);font-weight:800}
+  .closeout h3{font-size:22px;font-weight:900;margin:5px 0 8px}
+  .closeout p{color:#dcd6f7;font-size:14.5px}
+  footer{text-align:center;color:var(--muted);font-size:12px;margin-top:24px;padding:14px}
+  @media print{
+    @page{margin:12mm}
+    body{background:#fff;padding:0}
+    .card,.banner,.sec-card{box-shadow:none}
+    .banner{border-radius:14px}
+    .sec-card,.card,.closeout,.mv-row{break-inside:avoid;page-break-inside:avoid}
+    .section-title{break-after:avoid;page-break-after:avoid}
+  }
+  @media(max-width:820px){.g4{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:1fr}.mv-row{grid-template-columns:1fr 1fr}.mv-row .nm{grid-column:1/3}}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="banner">
+    <div class="eyebrow">SAP Signavio · Code Camp · Executive Briefing</div>
+    <div class="wm">Code Camp</div>
+    <div class="rt">Executive Infographic — Year-over-Year Impact</div>
+    <div class="period">Reporting period: Code Camp 2025 → Code Camp 2026 · Prepared September 2026</div>
+    <div class="headline">Satisfaction rose to 4.6/5. Inclusion and food posted the biggest gains; team composition is the only material decline; WiFi remains the one risk for executive attention.</div>
+  </div>
+
+  <div class="section-title">The Numbers That Matter</div>
+  <div class="grid g4">
+    <div class="card kpi"><div class="num">4.6</div><div class="label">Overall satisfaction /5</div><span class="mv-pill m-up"><span class="sym">+</span>+0.1 Improved</span></div>
+    <div class="card kpi"><div class="num">4.3</div><div class="label">More likely to use AI daily</div><span class="mv-pill m-flat"><span class="sym">=</span>2025 baseline</span></div>
+    <div class="card kpi"><div class="num">4.2</div><div class="label">Applicable solution built</div><span class="mv-pill m-up"><span class="sym">+</span>+0.1 Improved</span></div>
+    <div class="card kpi"><div class="num">4.6</div><div class="label">Met new people (top score)</div><span class="mv-pill m-flat"><span class="sym">=</span>Sustained</span></div>
+  </div>
+
+  <div class="section-title">The Business Case — Three Returns That Matter</div>
+  <div class="grid g3">
+    <div class="sec-card"><div class="sec-hd hd-sap"><span class="kick">Return 1</span><h2>AI Adoption at Scale</h2></div>
+      <div class="sec-bd ret"><strong>4.3/5</strong> leave more likely to use AI in daily work. Hands-on exposure to internal &amp; external tooling calibrates future investment.<div class="quote">"An eye-opening event about what the future brings."</div></div></div>
+    <div class="sec-card"><div class="sec-hd hd-violet"><span class="kick">Return 2</span><h2>Innovation Output</h2></div>
+      <div class="sec-bd ret"><strong>4.2/5</strong> built a realistically applicable solution — real problems, real tools, real constraints.<div class="quote">"A relevant challenge I can apply in my daily work."</div></div></div>
+    <div class="sec-card"><div class="sec-hd hd-navy"><span class="kick">Return 3</span><h2>Engagement &amp; Belonging</h2></div>
+      <div class="sec-bd ret">Inclusion rose to <strong>4.5 (+0.2)</strong> after acting on dietary feedback. Networking <strong>4.6</strong> — highest metric both years.<div class="quote">"Connections that unblock discussions going on for months."</div></div></div>
+  </div>
+
+  <div class="section-title">Year-over-Year Movement</div>
+  <div class="sec-card">
+    <div class="sec-hd hd-violet"><span class="kick">2025 → 2026 · read in seconds</span><h2>What moved, and which way</h2></div>
+    <div class="sec-bd">
+      <div class="mv-row"><span class="nm">Overall satisfaction</span><span class="y">4.5</span><span class="y now">4.6</span><span class="mv-pill m-up"><span class="sym">+</span>+0.1 Improved</span></div>
+      <div class="mv-row"><span class="nm">Felt included</span><span class="y">4.3</span><span class="y now">4.5</span><span class="mv-pill m-su"><span class="sym">+</span>+0.2 Improved</span></div>
+      <div class="mv-row"><span class="nm">Food &amp; drinks</span><span class="y">3.8</span><span class="y now">4.0</span><span class="mv-pill m-su"><span class="sym">+</span>+0.2 Improved</span></div>
+      <div class="mv-row"><span class="nm">Applicable solution</span><span class="y">4.1</span><span class="y now">4.2</span><span class="mv-pill m-up"><span class="sym">+</span>+0.1 Improved</span></div>
+      <div class="mv-row"><span class="nm">Met new people</span><span class="y">4.6</span><span class="y now">4.6</span><span class="mv-pill m-flat"><span class="sym">=</span>No meaningful change</span></div>
+      <div class="mv-row"><span class="nm">Technical infra / WiFi</span><span class="y">3.6</span><span class="y now">3.7</span><span class="mv-pill m-up"><span class="sym">+</span>+0.1 · still below threshold</span></div>
+      <div class="mv-row"><span class="nm">Team mix (roles/abilities)</span><span class="y">4.0</span><span class="y now">3.7</span><span class="mv-pill m-down"><span class="sym">−</span>−0.3 Declined</span></div>
+    </div>
+  </div>
+
+  <div class="section-title">The One Risk for Executive Attention</div>
+  <div class="sec-card">
+    <div class="sec-hd hd-risk"><span class="kick">Critical · 2nd consecutive year</span><h2>WiFi failure at an AI hackathon</h2></div>
+    <div class="sec-bd">
+      <p style="font-size:15px">Internet failure impeded or prevented AI-assisted work at an AI hackathon, both years. This is an existential credibility risk.</p>
+      <div class="quote">"Major tech company has a hackathon and internet doesn't work. Last year it didn't work either. Did we not learn?"</div>
+      <p style="margin-top:14px;font-weight:800;color:var(--navy);font-size:15px">Ask: make venue connectivity an SLA-backed, non-negotiable vendor requirement for 2027 — provisioned before any other budget decision.</p>
+    </div>
+  </div>
+
+  <div class="section-title">Executive Scorecard</div>
+  <div class="card scorecard" style="padding:0;overflow:hidden">
+    <table>
+      <thead><tr><th>Objective</th><th>2025</th><th>2026</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Innovation output</td><td class="yr">4.1</td><td class="yr">4.2</td><td><span class="mv-pill m-up" style="margin:0"><span class="sym">+</span>+0.1 Improving</span></td></tr>
+        <tr><td>Satisfaction</td><td class="yr">4.5</td><td class="yr">4.6</td><td><span class="mv-pill m-up" style="margin:0"><span class="sym">+</span>+0.1 Improving</span></td></tr>
+        <tr><td>Inclusion</td><td class="yr">4.3</td><td class="yr">4.5</td><td><span class="mv-pill m-su" style="margin:0"><span class="sym">+</span>+0.2 Improving</span></td></tr>
+        <tr><td>Social capital</td><td class="yr">4.6</td><td class="yr">4.6</td><td><span class="mv-pill m-flat" style="margin:0"><span class="sym">=</span>Sustained</span></td></tr>
+        <tr><td>Technical enablement</td><td class="yr">3.6</td><td class="yr">3.7</td><td><span class="mv-pill m-flat" style="margin:0"><span class="sym">=</span>Below threshold</span></td></tr>
+        <tr><td>Team effectiveness</td><td class="yr">4.0</td><td class="yr">3.7</td><td><span class="mv-pill m-down" style="margin:0"><span class="sym">−</span>−0.3 Declining</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="closeout">
+    <div class="kick">The recommendation</div>
+    <h3>Scale the program — don't shrink it.</h3>
+    <p>Fix the WiFi, fix the teams, feed everyone properly — and let the format do what it does. The concept works; the remaining issues are solvable infrastructure and process problems. Fix those, and 2027 is a 4.8/5 event.</p>
+  </div>
+
+  <footer>All insights derived exclusively from participant survey data · Evidence base: 346 responses (2025) · 206 responses (2026) · Prepared September 2026</footer>
+</div>
+</body>
+</html>
